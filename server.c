@@ -88,7 +88,7 @@ void printf_global(struct client *except, const char *format, ...) {
 	vfprintf(stdout, format, v);
 	va_end(v);
 	for (c = clients; c != NULL; c = c->next) {
-		if (c == except) continue;
+		//if (c == except) continue;
 		va_start(v, format);
 		vfprintf(c->sock, format, v);
 		va_end(v);
